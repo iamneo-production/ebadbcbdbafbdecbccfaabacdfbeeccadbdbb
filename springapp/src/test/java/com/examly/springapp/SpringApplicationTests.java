@@ -2,13 +2,16 @@ package com.examly.springapp;
 
 import org.testng.annotations.Test;
 import java.net.URL;
-
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterTest;  
 
 public class SpringApplicationTests {
 
@@ -22,6 +25,7 @@ public class SpringApplicationTests {
         driver = new RemoteWebDriver(new URL("http://<seleniumhost:port>/"), chromeOptions);
         driver.manage().window().maximize();
     }
+    
 
     @AfterTest
     public void afterTest() 
