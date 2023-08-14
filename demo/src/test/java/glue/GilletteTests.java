@@ -18,6 +18,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.PendingException;
 // import cucumber.api.java.en.Given;
 // import cucumber.api.java.en.Then;
 // import cucumber.api.java.en.When;
@@ -53,20 +54,22 @@ public class GilletteTests {
         reporter = Reporter.generateExtentReport();
     }
     
-    @Given("^User searches for HP Pen Drive")
+    @Given("^User searches for HP Pen Drive$")
     public void user_searches_for_HP_Pen_Drive() throws Throwable{
         System.out.println("User searches for HP Pen Drive");
         throw new PendingException();
     }
 
-    @When("^Add the first result on the page with quantity {")
-    public void add_the_first_result_on_the_page_with_quantity(Integer qty) {
+    @When("^Add the first result on the page with quantity (\\d+)$")
+    public void add_the_first_result_on_the_page_with_quantity(int qty)throws Throwable {
         System.out.println("Add the first result with quantity: " + qty);
+        throw new PendingException();
     }
 
-    @Then("Cart should display {int} pen drive")
-    public void cart_should_display_pen_drive(Integer qty) {
+    @Then("^Cart should display (\\d+) pen drive$")
+    public void cart_should_display_pen_drive(int qty)throws Throwable {
         System.out.println("Cart should display " + qty + " pen drive");
+        throw new PendingException();
     }
     @After
     public void tearDown() {
