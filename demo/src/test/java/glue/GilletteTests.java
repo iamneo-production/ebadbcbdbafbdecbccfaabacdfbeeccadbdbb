@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -41,11 +42,11 @@ public class GilletteTests {
 
     @Before
     public void setUp() throws MalformedURLException {
-        // Set up ChromeDriver path
-        // System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        //Set up ChromeDriver path
+        System.setProperty("webdriver.chrome.driver", "/home/coder/project/workspace/demo/path/to/chromedriver");
 
-        // Create ChromeDriver instance
-        // driver = new ChromeDriver();
+        //Create ChromeDriver instance
+        driver = new ChromeDriver();
         driver = base.openBrowser();
         
         driver.manage().window().maximize();

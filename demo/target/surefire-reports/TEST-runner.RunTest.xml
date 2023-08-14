@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="18" failures="0" name="runner.RunTest" time="187.819" errors="6" skipped="12">
+<testsuite tests="18" failures="0" name="runner.RunTest" time="1.546" errors="6" skipped="12">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.18+10-post-Debian-1deb11u1"/>
@@ -59,25 +59,16 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="| 1 |" name="| 1 |" time="11.254">
-    <error message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;ebadbcbdbafbdecbccfaabacdfbeeccadbdbb-0&apos;, ip: &apos;10.80.11.3&apos;
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.107+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;ebadbcbdbafbdecbccfaabacdfbeeccadbdbb-0&apos;, ip: &apos;10.80.11.3&apos;
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.107+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:553)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:228)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:138)
-	at runner.Base.openBrowser(Base.java:38)
+  <testcase classname="| 1 |" name="| 1 |" time="0.253">
+    <error message="The driver executable must exist: /home/coder/project/workspace/demo/path/to/chromedriver" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The driver executable must exist: /home/coder/project/workspace/demo/path/to/chromedriver
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:345)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:161)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:156)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:41)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:285)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:456)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:146)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
 	at glue.GilletteTests.setUp(GilletteTests.java:49)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -140,65 +131,20 @@ Capabilities {}
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: connection timed out: /34.86.173.116:443
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	... 66 more
-Caused by: java.net.ConnectException: connection timed out: /34.86.173.116:443
-	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-	at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
-	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
-	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
-	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:262)
-	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
-	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /34.86.173.116:443
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:261)
-	... 10 more
 </error>
-    <system-err>Aug 14, 2023 1:07:45 PM org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer createTracer
-INFO: Using OpenTelemetry for tracing
-</system-err>
   </testcase>
-  <testcase classname="| 1 |" name="Given User searches for HP Pen Drive" time="11.254">
+  <testcase classname="| 1 |" name="Given User searches for HP Pen Drive" time="0.253">
     <skipped/>
   </testcase>
-  <testcase classname="| 1 |" name="When Add the first result on the page with quantity 1" time="11.254">
+  <testcase classname="| 1 |" name="When Add the first result on the page with quantity 1" time="0.253">
     <skipped/>
   </testcase>
-  <testcase classname="| 1 |" name="Then Cart should display 1 pen drive" time="11.255">
+  <testcase classname="| 1 |" name="Then Cart should display 1 pen drive" time="0.253">
     <skipped/>
   </testcase>
-  <testcase classname="| 1 |" name="| 1 |" time="11.255">
+  <testcase classname="| 1 |" name="| 1 |" time="0.254">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at glue.GilletteTests.tearDown(GilletteTests.java:71)
+	at glue.GilletteTests.tearDown(GilletteTests.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -262,28 +208,19 @@ INFO: Using OpenTelemetry for tracing
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="| 1 |" name="| 1 |" time="11.255">
+  <testcase classname="| 1 |" name="| 1 |" time="0.254">
     <skipped/>
   </testcase>
-  <testcase classname="| 2 |" name="| 2 |" time="10.025">
-    <error message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;ebadbcbdbafbdecbccfaabacdfbeeccadbdbb-0&apos;, ip: &apos;10.80.11.3&apos;
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.107+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;ebadbcbdbafbdecbccfaabacdfbeeccadbdbb-0&apos;, ip: &apos;10.80.11.3&apos;
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.107+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:553)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:228)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:138)
-	at runner.Base.openBrowser(Base.java:38)
+  <testcase classname="| 2 |" name="| 2 |" time="0.002">
+    <error message="The driver executable must exist: /home/coder/project/workspace/demo/path/to/chromedriver" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The driver executable must exist: /home/coder/project/workspace/demo/path/to/chromedriver
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:345)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:161)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:156)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:41)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:285)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:456)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:146)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
 	at glue.GilletteTests.setUp(GilletteTests.java:49)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -346,62 +283,20 @@ Capabilities {}
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: connection timed out: /34.86.173.116:443
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	... 66 more
-Caused by: java.net.ConnectException: connection timed out: /34.86.173.116:443
-	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-	at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
-	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
-	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
-	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:262)
-	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
-	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /34.86.173.116:443
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:261)
-	... 10 more
 </error>
   </testcase>
-  <testcase classname="| 2 |" name="Given User searches for HP Pen Drive" time="10.025">
+  <testcase classname="| 2 |" name="Given User searches for HP Pen Drive" time="0.002">
     <skipped/>
   </testcase>
-  <testcase classname="| 2 |" name="When Add the first result on the page with quantity 2" time="10.025">
+  <testcase classname="| 2 |" name="When Add the first result on the page with quantity 2" time="0.002">
     <skipped/>
   </testcase>
-  <testcase classname="| 2 |" name="Then Cart should display 2 pen drive" time="10.025">
+  <testcase classname="| 2 |" name="Then Cart should display 2 pen drive" time="0.003">
     <skipped/>
   </testcase>
-  <testcase classname="| 2 |" name="| 2 |" time="10.025">
+  <testcase classname="| 2 |" name="| 2 |" time="0.004">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at glue.GilletteTests.tearDown(GilletteTests.java:71)
+	at glue.GilletteTests.tearDown(GilletteTests.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -465,28 +360,19 @@ Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /34.8
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="| 2 |" name="| 2 |" time="10.025">
+  <testcase classname="| 2 |" name="| 2 |" time="0.004">
     <skipped/>
   </testcase>
-  <testcase classname="| 5 |" name="| 5 |" time="10.023">
-    <error message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;ebadbcbdbafbdecbccfaabacdfbeeccadbdbb-0&apos;, ip: &apos;10.80.11.3&apos;
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.107+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;ebadbcbdbafbdecbccfaabacdfbeeccadbdbb-0&apos;, ip: &apos;10.80.11.3&apos;
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.107+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chrome}], desiredCapabilities=Capabilities {browserName: chrome}}]
-Capabilities {}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:553)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:228)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:138)
-	at runner.Base.openBrowser(Base.java:38)
+  <testcase classname="| 5 |" name="| 5 |" time="0.001">
+    <error message="The driver executable must exist: /home/coder/project/workspace/demo/path/to/chromedriver" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The driver executable must exist: /home/coder/project/workspace/demo/path/to/chromedriver
+	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:345)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:161)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:156)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:41)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:285)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:456)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:146)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
 	at glue.GilletteTests.setUp(GilletteTests.java:49)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -549,62 +435,20 @@ Capabilities {}
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: java.io.UncheckedIOException: java.net.ConnectException: connection timed out: /34.86.173.116:443
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:55)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:106)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
-	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
-	... 66 more
-Caused by: java.net.ConnectException: connection timed out: /34.86.173.116:443
-	at org.asynchttpclient.netty.channel.NettyConnectListener.onFailure(NettyConnectListener.java:179)
-	at org.asynchttpclient.netty.channel.NettyChannelConnector$1.onFailure(NettyChannelConnector.java:108)
-	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:28)
-	at org.asynchttpclient.netty.SimpleChannelFutureListener.operationComplete(SimpleChannelFutureListener.java:20)
-	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
-	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
-	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
-	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
-	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
-	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:262)
-	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
-	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /34.86.173.116:443
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:261)
-	... 10 more
 </error>
   </testcase>
-  <testcase classname="| 5 |" name="Given User searches for HP Pen Drive" time="10.023">
+  <testcase classname="| 5 |" name="Given User searches for HP Pen Drive" time="0.001">
     <skipped/>
   </testcase>
-  <testcase classname="| 5 |" name="When Add the first result on the page with quantity 5" time="10.023">
+  <testcase classname="| 5 |" name="When Add the first result on the page with quantity 5" time="0.001">
     <skipped/>
   </testcase>
-  <testcase classname="| 5 |" name="Then Cart should display 5 pen drive" time="10.024">
+  <testcase classname="| 5 |" name="Then Cart should display 5 pen drive" time="0.001">
     <skipped/>
   </testcase>
-  <testcase classname="| 5 |" name="| 5 |" time="10.024">
+  <testcase classname="| 5 |" name="| 5 |" time="0.002">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at glue.GilletteTests.tearDown(GilletteTests.java:71)
+	at glue.GilletteTests.tearDown(GilletteTests.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -668,7 +512,7 @@ Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /34.8
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="| 5 |" name="| 5 |" time="10.025">
+  <testcase classname="| 5 |" name="| 5 |" time="0.003">
     <skipped/>
   </testcase>
 </testsuite>
