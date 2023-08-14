@@ -51,7 +51,7 @@ public class GilletteTests {
     //     driver = base.openBrowser();
         
         //driver.manage().window().maximize();
-        reporter = Reporter.generateExtentReport();
+        //reporter = Reporter.generateExtentReport();
     }
     
     @Given("^User searches for HP Pen Drive$")
