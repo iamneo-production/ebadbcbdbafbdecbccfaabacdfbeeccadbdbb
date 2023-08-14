@@ -44,13 +44,13 @@ public class GilletteTests {
     @Before
     public void setUp() throws MalformedURLException {
         //Set up ChromeDriver path
-       System.setProperty("webdriver.chrome.driver", "/home/coder/project/workspace/demo/path/to/chromedriver");
+    //    System.setProperty("webdriver.chrome.driver", "/home/coder/project/workspace/demo/path/to/chromedriver");
 
-        //Create ChromeDriver instance
-        driver = new ChromeDriver();
-        driver = base.openBrowser();
+    //     //Create ChromeDriver instance
+    //     driver = new ChromeDriver();
+    //     driver = base.openBrowser();
         
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         reporter = Reporter.generateExtentReport();
     }
     

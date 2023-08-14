@@ -7,6 +7,6 @@ Feature: Order with different quantities
 
     Examples:
       | qty |
-      | 1   |
-      | 2   |
-      | 5   |
+      | 10  |
+      | 11  |
+      | 12  |
