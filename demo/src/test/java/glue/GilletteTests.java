@@ -43,7 +43,7 @@ public class GilletteTests {
     @Before
     public void setUp() throws MalformedURLException {
         //Set up ChromeDriver path
-        System.setProperty("webdriver.chrome.driver", "/home/coder/project/workspace/demo/path/to/chromedriver");
+       System.setProperty("webdriver.chrome.driver", "/home/coder/project/workspace/demo/path/to/chromedriver");
 
         //Create ChromeDriver instance
         driver = new ChromeDriver();
@@ -53,12 +53,13 @@ public class GilletteTests {
         reporter = Reporter.generateExtentReport();
     }
     
-    @Given("User searches for HP Pen Drive")
-    public void user_searches_for_HP_Pen_Drive() {
+    @Given("^User searches for HP Pen Drive")
+    public void user_searches_for_HP_Pen_Drive() throws Throwable{
         System.out.println("User searches for HP Pen Drive");
+        throw new PendingException();
     }
 
-    @When("Add the first result on the page with quantity {int}")
+    @When("^Add the first result on the page with quantity {")
     public void add_the_first_result_on_the_page_with_quantity(Integer qty) {
         System.out.println("Add the first result with quantity: " + qty);
     }
