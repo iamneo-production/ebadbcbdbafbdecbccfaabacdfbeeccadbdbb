@@ -62,12 +62,12 @@ public class GilletteTests {
 
     @When("^Add the first result on the page with quantity (\\d+)$")
     public void add_the_first_result_on_the_page_with_quantity(int qty) {
-        System.out.println("Add the first result with quantity: " + qty);
+        System.out.println("Add the first result with quantity: <qty>");
     }
 
     @Then("^Cart should display (\\d+) pen drive$")
     public void cart_should_display_pen_drive(int qty) {
-        System.out.println("Cart should display " pen drive");
+        System.out.println("Cart should display <qty> pen drive");
         
     }
     @After
