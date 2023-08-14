@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: runner.RunTest
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 0, Errors: 3, Skipped: 12, Time elapsed: 0.596 sec <<< FAILURE!
-| 1 |  Time elapsed: 0.184 sec  <<< ERROR!
+Tests run: 15, Failures: 0, Errors: 3, Skipped: 12, Time elapsed: 0.677 sec <<< FAILURE!
+| 1 |  Time elapsed: 0.2 sec  <<< ERROR!
 java.lang.NullPointerException
-	at glue.GilletteTests.tearDown(GilletteTests.java:76)
+	at glue.GilletteTests.tearDown(GilletteTests.java:75)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,7 +69,7 @@ java.lang.NullPointerException
 
 | 2 |  Time elapsed: 0.001 sec  <<< ERROR!
 java.lang.NullPointerException
-	at glue.GilletteTests.tearDown(GilletteTests.java:76)
+	at glue.GilletteTests.tearDown(GilletteTests.java:75)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -134,7 +134,7 @@ java.lang.NullPointerException
 
 | 5 |  Time elapsed: 0.002 sec  <<< ERROR!
 java.lang.NullPointerException
-	at glue.GilletteTests.tearDown(GilletteTests.java:76)
+	at glue.GilletteTests.tearDown(GilletteTests.java:75)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

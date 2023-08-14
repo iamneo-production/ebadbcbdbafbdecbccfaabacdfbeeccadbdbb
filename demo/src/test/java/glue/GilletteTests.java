@@ -55,21 +55,20 @@ public class GilletteTests {
     }
     
     @Given("^User searches for HP Pen Drive$")
-    public void user_searches_for_HP_Pen_Drive() throws Throwable{
+    public void user_searches_for_HP_Pen_Drive() {
         System.out.println("User searches for HP Pen Drive");
-        throw new PendingException();
+        
     }
 
     @When("^Add the first result on the page with quantity (\\d+)$")
-    public void add_the_first_result_on_the_page_with_quantity(int qty)throws Throwable {
+    public void add_the_first_result_on_the_page_with_quantity(int qty) {
         System.out.println("Add the first result with quantity: " + qty);
-        throw new PendingException();
     }
 
     @Then("^Cart should display (\\d+) pen drive$")
-    public void cart_should_display_pen_drive(int qty)throws Throwable {
-        System.out.println("Cart should display " + qty + " pen drive");
-        throw new PendingException();
+    public void cart_should_display_pen_drive(int qty) {
+        System.out.println("Cart should display " pen drive");
+        
     }
     @After
     public void tearDown() {

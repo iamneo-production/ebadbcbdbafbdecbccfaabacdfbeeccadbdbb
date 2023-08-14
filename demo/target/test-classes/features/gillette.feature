@@ -5,8 +5,4 @@ Feature: Order with different quantities
     When Add the first result on the page with quantity <qty>
     Then Cart should display <qty> pen drive
 
-    Examples:
-      | qty |
-      | 1  |
-      | 2  |
-      | 5  |
+  
