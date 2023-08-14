@@ -19,6 +19,17 @@
   </properties>
 
   <dependencies>
+   <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>7.0.0</version> <!-- Adjust version as needed -->
+    </dependency>
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>7.0.0</version> <!-- Adjust version as needed -->
+        <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>com.aventstack</groupId>
       <artifactId>extentreports</artifactId>
